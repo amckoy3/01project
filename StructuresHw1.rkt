@@ -21,7 +21,16 @@
         ((sum-up-numbers-simple (cdr L)) ))
         )
   
- 
+;3)
+;sum-up-numbers-general function
+(define (sum-up-numbers-general L)
+  (cond ((null? L) 0)
+        (cond ((list? (car L))
+               (+ (sum-up-numbers-general (car L)) (sum-up-numbers-general (cdr L)))
+               (+ (car L) (sum-up-numbers-general (cdr L))))
+              )
+        )
+  )
 
 
   
