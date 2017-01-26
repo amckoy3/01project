@@ -17,7 +17,7 @@
   (cond ((number? L)
          +(car L)
               (sum-up-numbers-simple (cdr L))
-              (else (cons '+ 0 ))
+              (+ (car L) (sum-up-numbers-simple (cdr L) ))
               )
         )
   )
