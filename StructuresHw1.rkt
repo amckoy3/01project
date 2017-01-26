@@ -14,7 +14,7 @@
 ;2)
 ; sum-up-numbers-simple function
 (define (sum-up-numbers-simple L)
-  (cond 
+  (cond ((null? L) 0)
     ((number? (car L))
         (+(car L) (sum-up-numbers-simple (cdr L)))
               )
