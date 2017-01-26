@@ -14,12 +14,12 @@
 ;2)
 ; sum-up-numbers-simple function
 (define (sum-up-numbers-simple L)
-  (cond ((null? L) 0)
-        (else +(car l)
+  (cond ((number? L)
+         +(car L)
               (sum-up-numbers-simple (cdr L))
-        )
+              (else (cons '+ 0 ))
+              )
         )
   )
-  
 
-
+    
