@@ -5,5 +5,6 @@
 		((list? L)) ;TESTING IF NUMBERS ARE BEING READ
 		(else L)
 		)
-	)
+	) ; returned true
+
 
