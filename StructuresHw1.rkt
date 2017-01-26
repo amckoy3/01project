@@ -9,6 +9,14 @@
 		)
 		(else L)
 		)
-	) 
+	)
+
+;2)
+; sum-up-numbers-simple function
+(define (sum-up-numbers-simple L)
+  (cond ((null? lis) 0)
+        (else (eval(cons '+ lis)))
+        )
+  )
 
 
