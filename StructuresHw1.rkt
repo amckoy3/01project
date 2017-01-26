@@ -28,3 +28,15 @@
           ))
     
 > (reverse-general '(a b c d))   ;;keeps printing empty list
+
+(define (reverse-general L)
+    (cond ((null? L) '())
+          ((list? L)
+           (append(reverse-general (cdr L)) ;;extracts rest of list after 1st element
+                  (list (reverse-general (car L))) ;;takes first element and adds it to list
+                  )
+           )
+          (else L)
+          )
+    )
+
