@@ -5,9 +5,10 @@
 		((list? L) ;TESTING IF NUMBERS ARE BEING READ
 		(append ( reverse-general (cdr L)) ;TAKES REMAINING ITEMS 
 			(list (reverse-general (car L))) ;QOUTE REVERSED LIST
+			)
 		)
 		(else L)
 		)
-	)) 
+	) 
 
 
