@@ -15,8 +15,11 @@
 ; sum-up-numbers-simple function
 (define (sum-up-numbers-simple L)
   (cond ((null? lis) 0)
-        (else (eval(cons '+ lis)))
+        (else +(car lis)
+              (adder (cdr lis))
+        )
         )
   )
+  
 
 
