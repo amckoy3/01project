@@ -46,21 +46,27 @@
 ;4)
 ;min in list 1 has to be greater than min in list 2
 ;min-above-min function
+;if one list is empty
 (define (min-above-min L1 L2)
   ;case 1: check if first list null
   (cond ((null? L1) #F)
         
   ;case 2: if L2 null compare min values in L1 
   ((null? L2)
+   (number? (car L1))
    (null? (cdr L1)) (car L1))
-  ((< (car l1) (min (cdr L1))) (car L1))
+  ((< (car L1) (min (cdr L1))) (car L1))
   (else (min(cdr L1)))
-              
-              
-   ;(< (car L1) (min (cdr L1)) (car L1)))
-  ;(else (min (cdr L1)))
-     ;(< (car L1) (cdr L1)))
-        ;(map min L1 L2)
+
+     ;; find min in L2 if not null
+     (define (find-nxt-smallest L1 L2)
+       (cond ((null? L1) '0)
+             ((null? L2) '0)
+              (number? (car L2))
+              (null? (cdr L2)) (car L2))
+       ((< (car L2) (min (cdr L2))) (car L2))
+       (else (min(cdr L2)))
+   )
   )
 )
   
