@@ -31,7 +31,7 @@
               )
         ((sum-up-numbers-general (cdr L)) ))
         )
-  (+ (sum-up-numbers-gen (car L)) (sum-up-numbers-general (cdr L))) 
+  (+ (car x)(sum-up-numbers-gen (cdr x))) ((sum-up-numbers-general (cdr L))) 
   )
 
   
