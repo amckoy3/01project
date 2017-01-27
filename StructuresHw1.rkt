@@ -25,15 +25,16 @@
 ;sum-up-numbers-general function
 (define (sum-up-numbers-general L)
   (cond ((null? L) 0)
-        ((not (number? L)) + 0
         ((list? (car L))
-         (+ (sum-up-numbers-general (car L)) (sum-up-numbers-general (cdr L)))))
+         (+ (sum-up-numbers-general (car L)) (sum-up-numbers-general (cdr L))))
         
+        ((not (number? (car L)))
+         (+ 0 (sum-up-numbers-general (cdr L))))
         (else
          (+ (car L) (sum-up-numbers-general (cdr L)))
          )
         )
-  )
+ ) 
   
 
   
