@@ -27,15 +27,21 @@
   (cond ((null? L) 0)
         ((list? (car L))
          (+ (sum-up-numbers-general (car L)) (sum-up-numbers-general (cdr L))))
-        
         ((not (number? (car L)))
          (+ 0 (sum-up-numbers-general (cdr L))))
         (else
          (+ (car L) (sum-up-numbers-general (cdr L)))
          )
         )
- ) 
-  
+ )
+
+;4)
+;min in list 1 has to be greater than min in list 2
+;min-above-min function
+(define (min-above-min L1 L2)
+  ;case 1: check if null
+  (cond ((null? L1) (null? L2) #F)
+        ))
 
   
 
