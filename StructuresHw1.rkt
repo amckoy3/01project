@@ -56,19 +56,20 @@
    (number? (car L1))
    (null? (cdr L1)) (car L1))
   ((< (car L1) (min (cdr L1))) (car L1))
-  (else (min(cdr L1)))
+  ((min(cdr L1)))
 
-     ;; find min in L2 if not null
-     (define (find-nxt-smallest L1 L2)
-       (cond ((null? L1) '0)
-             ((null? L2) '0)
-              (number? (car L2))
-              (null? (cdr L2)) (car L2))
-       ((< (car L2) (min (cdr L2))) (car L2))
-       (else (min(cdr L2)))
-   )
+  ;; find min in L2 if not null
+     ;(number? (car L2))
+     ;(null? (cdr L2)) (car L2))
+  ;((< (car L2) (min (cdr L2))) (car L2))
+  ;((min(cdr L2)))
+   
   )
-)
+  )
+  
+  
+  
+
   
   
 
