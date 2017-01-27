@@ -23,17 +23,16 @@
   
 ;3)
 ;sum-up-numbers-general function
+(define (sum-up-numbers-gen x)
 (define (sum-up-numbers-general L)
-  (define (inner-sum x)
-    (cond ((null? x) 0)
-        ((number? (car x))
-               (+ (car x) (sum-up-numbers-general (cdr x)))
-               )
-        ((sum-up-numbers-general (cdr x)))
+  (cond ((null? L) 0)
+    ((number? (car L))
+        (+(car L) (sum-up-numbers-general (cdr L)))
+              )
+        ((sum-up-numbers-general (cdr L)) ))
         )
-               
+  (+ (sum-up-numbers-gen (car L)) (sum-up-numbers-general (cdr L))) 
   )
-)
 
   
 
