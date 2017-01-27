@@ -44,7 +44,8 @@
         
   ;case 2: if there is no number in L2
   ((null? L2)
-   (min (car L1) (min-above-min (cdr L1)))
+   (min (car L1) (car L2))
+         (list? (cdr L1) (cdr L2))
   )
 )
   )
