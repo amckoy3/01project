@@ -40,9 +40,14 @@
 ;min-above-min function
 (define (min-above-min L1 L2)
   ;case 1: check if null
-  (cond ((null? L1) (null? L2) #F)
-        ))
-
+  (cond ((null? L1) #F)
+        
+  ;case 2: if there is no number in L2
+  ((null? L2)
+   (min (car L1) (min-above-min (cdr L1)))
+  )
+)
+  )
   
 
     
